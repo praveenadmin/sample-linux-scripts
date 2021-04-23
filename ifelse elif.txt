@@ -1,0 +1,25 @@
+#!/bin/bash
+echo -e "Please enter the Maths marks: \c"
+read -r m
+echo -e "Please enter the Physics marks: \c"
+read -r p
+echo -e "Please enter the chemistry marks: \c"
+read -r c
+
+if [ $m -ge 35 -a $p -ge 35 -a $c -ge 35 ]; then
+    total=`expr $m + $p + $c`
+    avg=`expr $total / 3`
+   echo "Total marks you got = $total"
+   echo "Average marks = $avg"
+   if [ $avg -ge 75 ]; then
+   echo "Cong you got Destioncation"
+  elif [ $avg -ge 60 -a $avg -lt 75 ];then
+    echo "cong you got firstclass"
+   elif [ $avg -ge 50 -a $avg -lt 60 ]; then
+    echo "you got second class"
+   elif [ $avg -ge 35 -a $avg -lt 50 ]; then
+   echo "you got Thid class"
+   fi
+else
+echo "Sorry you faild"
+fi

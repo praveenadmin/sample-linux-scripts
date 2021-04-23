@@ -1,0 +1,12 @@
+#!/bin/bash
+echo -e "Please provide filename you want to crate: \c"
+read -r file
+touch /scripts/$file.sh
+echo '#!/bin/bash' > /scripts/$file.sh
+echo '#Purpose:' >> /scripts/$file.sh
+echo '#Version:' >> /scripts/$file.sh
+echo '#Created Date:' 'date' >> /scripts/$file.sh
+echo '#Modified Dare:' >> /scripts/$file.sh
+echo '#Author: Praveen kumar' >> /scripts/$file.sh
+echo '# START #' >> /scripts/$file.sh
+echo '# END #' >> /scripts/$file.sh

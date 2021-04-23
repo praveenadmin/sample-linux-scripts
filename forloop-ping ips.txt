@@ -1,0 +1,11 @@
+#!/bin/bash
+for i in `cat hostfile`
+do
+ping -c 1 $i > /home/ec2-user/abc
+valid=`echo $?`
+if [ $valid -gt 1 ]; then
+echo "$i host is not reachable"
+else
+echo "$i host is up"
+fi
+done

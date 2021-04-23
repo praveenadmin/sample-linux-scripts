@@ -1,0 +1,15 @@
+# Auto user creation in Linux
+
+#!/bin/bash
+#read -p "Please enter the Username:  " USER_NAME
+#read -s -p "Please enter the Passwod: " PASSWORD
+USER_NAME=${@}
+for USER in ${USERS}
+do
+SPECIAL='!@#$%^&*()_+'
+SPEC_CHAR=$(echo $SPECIAL|fold -w1|shuf|head -1)
+PASSWORD=$(date +%s%N)${RANDOM}${SPEC_CHAR}
+useradd ${USER_NAME} -p ${PASSWORD}
+echo "${USER_NAME} created sucessfully....!!!"
+echo ${PASSWORD}
+done

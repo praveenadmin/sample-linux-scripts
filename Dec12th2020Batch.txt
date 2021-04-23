@@ -1,0 +1,884 @@
+DevOps with AWS Career Guidance  Mithun Technologies     +91-9980923226  devopstrainingblr@gmail.com
+-------------------------------  -------------------     --------------  ---------------------------
+
+9014996877
+
+
+
+GitHub
+GitLab
+BitBucket
+
+SVN
+CVS
+TFS
+
+Monolithic Architecture --> we dont want to use Docker and K8
+
+Micro Services Arch --> We shoud use Docker and K8 or Swarm
+
+
+Linux Commands  15
+
+Shell Scripting 10
+
+Git and GitHUb - 10
+
+Maven - 4
+
+Tomcat 4
+
+SonarQube - 4
+
+Nexus - 5
+
+Jenkins - 15 - 16
+
+Docker - 20
+
+K8 - 20 +
+
+Ansible - 10
+
+NewRelic - 2
+
+Resume Preparation - 2
+
+AWS - 10 - 13 Hours
+
+12 T Est Manger
+
+(9 QA + 3  DevOps
+
+
+Dec 14 
+
+Monday to Saturday
+
+6 Am to 7.30 AM IST
+
+
+Linux Commands 
+--------------
+
+SSH Tools
+---------
+
+Putty        --> Windows
+
+Super Putty
+
+Mobax term
+
+
+Terminal --> MAC
+
+IP address / Hostname
+
+Username
+password
+
+
+FTP Tools
+---------
+
+WinSCP        --> Windows OS
+filezilla
+
+
+
+
+
+Open SOurce --> SC
+
+Free
+
+AIX --> IBM
+
+Sun SOlarios --> Sun micro Systems --> Oracle
+
+ls
+mkdir
+
+Linux Directory Structure
+-------------------------
+
+
+Folder --> Windows
+
+Directory --> Linux
+
+
+C://
+
+Users
+ mithun
+
+
+/ --> Root dir
+
+home
+----
+mithun
+
+/home/mithun --> mithun user HD
+devops.txt
+
+/home/ruthvik --> ruhtvik user HD
+devops.txt
+
+ruthvik
+shishir
+manan
+
+
+bin
+---
+ls
+mkdir
+date
+
+
+sbin
+----
+useradd
+shutdown
+
+
+
+Types of users in Linux
+-----------------------
+
+root user --> SUper User / Admin User
+
+root
+
+normal users
+
+N number of normal users
+
+system users
+
+jenkins --> jenkins --> System User
+
+apache --> system
+
+
+
+etc
+---
+
+Configuration files
+
+sudoers
+passwd
+shadow
+motd
+group
+
+
+dev
+---
+
+
+proc
+-----
+
+cpuinfo
+
+meminfo
+
+
+lib
+---
+
+
+temp
+----
+devops.txt
+
+
+opt
+---
+
+maven
+tomcat
+
+
+
+AWS
+
+Azure
+
+GCP
+
+
+Step1) Register in AWS using below url and follow the video.
+
+https://console.aws.amazon.com/
+
+Valid DD/         CD 
+
+12 Months free 
+
+https://youtu.be/MEunyVOYSZg
+
+
+Step2) Create the EC2 Instance in AWS.
+
+Follow below video and create EC2 instance.
+
+https://www.youtube.com/watch?v=lnelPTX_xeY
+
+Step3) Convert PEM to PPK and connect 
+
+For Windows OS Only
+-------------------
+
+Follow below video and convert PEM to PPK file.
+
+https://mithuntechnologies-devops.blogspot.com/2019/09/convert-pemprivacy-enhanced-mail-file_12.html
+
+https://www.youtube.com/watch?v=0CGokKoVpJY
+
+
+-------------------------------
+For MAC Book Only
+-----------------
+https://www.youtube.com/watch?v=R4RDlKRT3D0
+
+
+
+ec2-user --> Normal user
+
+root
+
+
+Putty
+
+PEM to PPK
+
+Moabx Term --> No need to convert
+
+With PEM file we can connect
+
+
+
+
+mkdir dirname
+
+mkdir Test
+
+mkdir -v DevOps
+
+
+  DevOps
+     LinuxCommands
+	      ShellScript
+		      Git
+			    Maven
+				  Tomcat
+				    SonarQube
+
+mkdir -vp DevOps/LinuxCommands/ShellScript/Git/Maven/Tomcat/SonarQube
+
+mkdir  DevOps/LinuxCommands/ShellScript/Git/Maven/Tomcat/SonarQube/Nexus
+			
+					  
+mkdir -m 700 Python
+
+ls
+					  
+yum install tree -y
+
+yum update tree	-y				  
+
+yum remove tree -y
+
+
+
+sudo su -
+
+
+.ssh
+
+.bash_profile
+
+What is Inode?
+
+Inode is a Data Structure, it can store the file/dir info.
+
+mkdir
+ls
+tree
+yum
+pwd
+
+cd
+
+
+
+cd ~ (OR) cd
+
+rmdir --> emty dirs...
+
+
+rm -rf DevOps
+
+
+
+yum install tree -y        --> Redhat/Centos
+
+apt-get install tree -y  --> Ubuntu
+
+
+touch
+
+
+cd DevOps/LC/SH/
+
+~ --> User HD
+. --> Current dir
+
+find . -type f -empty
+
+
+find . -type d -empty
+
+
+bhaskar.txt
+
+#find / -name bhaskar.txt
+
+
+find . -type f -perm 700
+
+
+                  umask     File Permissions       Dir Permissions
+
+root              0022          644                   755
+
+normal user       0002          664                   775
+
+
+
+Base Permissions for File is: 0666
+                          (-) 0222
+						  ---------
+						      0444
+
+Base permissions for Dir is: 0777
+                         (-) 0002
+						 --------
+						     0775
+
+
+
+
+r. --> 4
+
+w ---> 2
+
+x ---> 1
+
+
+User      other
+6    4     4
+   Group
+
+
+rw- r-- r--
+
+
+664 
+
+rw- rw- r --
+rw- rw- r--
+
+
+775
+
+rwx rwx r-x
+
+rwx rwx r-x
+
+
+umask 0222
+
+
+
+
+vi ~/.bash_profile
+
+umask 0222
+
+
+
+/etc/profile
+
+umask 0222
+
+
+
+chmod 000 devops.txt
+
+
+chmod 444 devops.txt 
+chmod ugo+r devops.txt 
+
+chmod u+r devops.txt 
+
+u
+g
+o
+
+chmod u+rwx,g+rw devops.txt 
+
+
+chmod 764 devops.txt 
+
+
+
+-wx -wx -wx devops.txt
+
+Hello Guys
+
+
+
+
+chmod -R 000 Bhaskar
+
+
+
+
+
+
+chown
+
+sudo su - --> It will switch to root user, point to the root user HD and will load root user configurations.
+
+
+sudo su -->  It will switch to root user, point to the current dir and will not load root user configurations.
+
+
+a)/         --> root dir
+b)/root     --> root user hd
+c)/home/root
+d) NA
+
+
+
+
+Ctrl  + C
+
+Ctrl + V
+
+
+cp command
+
+
+cp fn/dn destinationdirpath
+
+cp -r dirname targetdir
+
+cp fn targetdir
+
+mv -- > ctrl + X
+
+file
+
+
+
+/opt/amazon.log
+
+
+/tmp/amazon.log
+
+
+
+     1GB             1GB
+ln filename /tmp/linkfiilename
+
+ln -s filename lnfilename
+
+HardLink                          Softlink
+sames as original file            diff properties than of
+1GB                                 1 KB
+
+u can able access the linkfile     not able to access the linkfile
+
+nodepad
+
+notepad ++
+
+
+
+vi
+
+vim
+
+nano
+
+
+1) vi hello.txt
+  press i --->INSERT MOde
+  ...
+  ...
+  ..
+  ..
+  
+  press the esc --> command mode
+  :wq
+
+2) vi hello.txt
+press i --->INSERT MOde
+
+  ...
+  ...
+  ..
+  
+   press the esc --> command mode
+   :q!
+  
+
+3) vi hello.txt
+
+:q
+
+
+ctrl + o  --> Save
+
+ctrl + x --> Close
+
+
+Create a file vi ~/.ssh/config
+
+
+ 
+and add belo wlines
+
+Host *
+    ServerAliveInterval 30
+    ServerAliveCountMax 2
+
+
+
+Mobiax term
+
+vi ~/.ssh/config
+
+Type - i --> Insert mode
+
+Host *
+    ServerAliveInterval 30
+    ServerAliveCountMax 2
+	
+
+echo Hello Guys
+
+Hello Guys
+
+Ssystem.out.println("Hello Guys");
+
+Hello Guys
+
+print("Hello Guys")
+
+cat -n filename
+
+head -n 25 filenanme
+
+head -25 filename
+
+tail -25 filename
+
+tail -f fn
+..
+...
+
+ctrl + c --> terminate the process
+
+
+108
+
+10
+
+to 20
+
+
+sed -n "108p" filename
+
+
+ctrl + f --> forward
+
+less filename
+
+type q --> quit
+
+
+t2.micro
+
+1 GB RAM 1 Core CPU
+
+t2.medium
+
+4 GB RAM 2 COREs
+
+ls
+mkdir
+
+
+df -h
+
+
+application log file
+
+
+du -h DevOps
+
+hostname
+
+
+
+Windows + r
+
+
+services.msc
+
+
+systemctl list-unit-files
+
+
+service (OR) systemctl
+
+
+sshd
+
+
+start
+stop
+restart
+status
+
+
+service sshd status
+
+systemctl --> 7.x , 8.x
+
+
+systemctl status sshd
+
+
+
+systemctl disable sshd
+
+service enable sn
+
+chconfig sshd off
+
+last
+
+
+jenkins --> jenkins
+
+
+
+service jenkins stop
+
+
+ps -ef | grep jenkins
+
+
+PID
+
+     -1
+kill -9 PID
+     -64
+	 
+	 
+
+KT
+
+
+yum install sysstat -y
+
+sar
+
+10 GB
+DevOps
+
+
+zip
+
+tar
+
+
+
+zip -r devops.zip DevOps
+
+
+devops.zip
+
+
+unzip devops.zip -d /tmp/
+
+DevOps
+
+tar -cvf devops.tar DevOps
+
+devops.tar
+
+tar -xvf devops.tar
+
+
+ec2-user
+
+
+devops.tar.gz
+
+
+tar -xvzf devops.tar.gz
+
+
+
+useradd bhaskar
+
+
+/home
+
+bhaskar
+
+
+/etc/
+
+shadow
+passwd
+group
+
+UID
+
+7.x --> 1000
+
+6.x --> 500
+
+
+What is the UID for root user?
+
+0
+
+#passwd bhaskar
+
+#passwd root
+
+#passwd 
+
+
+
+****
+****
+
+
+
+ec2-user
+
+
+bhaskar
+
+
+7
+
+
+#chage bhaskar
+
+
+5 users
+
+2 DevOps
+1 Developer
+1 QA
+1 DBA
+
+
+
+$passwd
+
+Current password
+
+******
+New Passwd : ****
+C Password : *****
+
+
+
+#passwd bhaskar
+
+*******
+*******
+
+
+bhaskar
+
+devops
+
+#usermod -g devops bhaskar
+
+
+#id bhaskar
+
+
+#usermod -L  bhaskar
+
+usermod -U  bhaskar
+
+
+
+su
+
+
+NU --> NU  Password Required
+
+NU --> RU root user Password Required
+
+RU --> NU --> no need the password
+
+
+su - bhaskar
+
+su bhaskar
+
+
+su - root
+
+su -
+
+
+sudo su - --> no password required
+
+
+
+
+
+root
+****
+
+
+
+/etc
+
+vi sudoers
+
+bhaskar
+
+#visudo
+
+sudoers
+bhaskar
+
+
+
+
+
+
+
+
+

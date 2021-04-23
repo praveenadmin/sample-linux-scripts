@@ -1,0 +1,15 @@
+#!/bin/bash
+
+## creating older files 
+
+toch -d "Mon 5 Aug 2019 12:15:00" file_name
+
+
+##show older files 
+
+find /path/ -mtime +90 -exec ls -l {} \;
+
+find /path/ -mtime +90 -exec rm {} \;       ## removing older files
+
+find /path/  -mtime +90 -exec mv oldfilename newfilename {} \;    ## renaming older files
+find /home/ec2-user/ -mtime +90 -exec {} {}.old \;
